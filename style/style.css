@@ -1,0 +1,122 @@
+/* resetting css rules */
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+/* cores */
+
+:root {
+    --back-color: #202020;
+    --button-numbers: #3c3c3c;
+    --button-operators: #323232;
+    --blue-button: #4cc2ff;
+    --blue-hover: #47b1e8;
+}
+
+/* body */
+
+body {
+    background-color: var(--back-color);
+    margin: 0 auto;
+    padding: 100px;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.193);
+    border-radius: 8px;
+    padding: 4px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* section display */
+
+.display {
+    height: 100px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.display h2 {
+    color: rgba(255, 255, 255, 0.259);
+    font-weight: 300;
+    font-size: 1em;
+}
+
+.display h1 {
+    color: white;
+    font-size: 50px;
+}
+
+/* section calculator */
+
+.transparent_operators {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2px;
+}
+
+.transparent_operators [type="button"] {
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+.transparent_operators input:hover {
+    background-color: var(--button-numbers);
+}
+
+.operators {
+    margin-top: 2px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+}
+
+.operators [type="button"] {
+    background-color: var(--button-operators);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 14px;
+    font-size: 16px;
+}
+
+.operators [type="button"]:hover {
+    background-color: var(--button-numbers);
+}
+
+.operators .numbers {
+    background-color: var(--button-numbers);
+}
+
+.operators .numbers:hover {
+    background-color: var(--button-operators);
+}
+
+.operators #result {
+    background-color: var(--blue-button);
+    color: black;
+}
+
+.container .operators #result:hover {
+    background-color: var(--blue-hover);
+}
+
+
+/* section scientific calculator */
+
+.scientific {
+    display: none;
+    grid-template-columns: repeat(5, auto);
+}

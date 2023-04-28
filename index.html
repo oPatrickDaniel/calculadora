@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="./script/script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <section class="display">
+
+            <h2 id="display_preview">0</h2>
+            <h1 id="display_result">0</h1>
+        </section>
+        <section class="transparent_operators">
+
+            <input type="button" value="MC">
+            <input type="button" value="MR">
+            <input type="button" value="M+">
+            <input type="button" value="M-">
+            <input type="button" value="MS">
+            <input type="button" value="M^">
+        </section>
+        <section class="operators">
+
+            <input onclick="percentage()" type="button" value="%">
+            <input onclick="del()" type="button" value="CE">
+            <input onclick="to_clean()" type="button" value="C">
+            <input onclick="del()" type="button" value="X">
+            <input onclick="fracture()" type="button" value="1/X">
+            <input onclick="pow()" type="button" value="X^2">
+            <input onclick="sqrt()" type="button" value="2√">
+            <input onclick="inner_preview(this)" type="button" value="/">
+
+            <input onclick="inner_digit(this)" class="numbers" type="button" value="7">
+            <input onclick="inner_digit(this)" class="numbers" type="button" value="8">
+            <input onclick="inner_digit(this)" class="numbers" type="button" value="9">
+            <input onclick="inner_preview(this)" type="button" value="*">
+
+            <input onclick="inner_digit(this)" class="numbers" type="button" value="4">
+            <input onclick="inner_digit(this)" class="numbers" type="button" value="5">
+            <input onclick="inner_digit(this)" class="numbers" type="button" value="6">
+            <input onclick="inner_preview(this)" type="button" value="-">
+
+            <input onclick="inner_digit(this)" class="numbers" type="button" value="1">
+            <input onclick="inner_digit(this)" class="numbers" type="button" value="2">
+            <input onclick="inner_digit(this)" class="numbers" type="button" value="3">
+            <input onclick="inner_preview(this)" type="button" value="+">
+
+            <input class="numbers" type="button" value="+/-">
+            <input onclick="inner_digit(this)" class="numbers" type="button" value="0">
+            <input onclick="inner_digit(this)" class="numbers" type="button" value=".">
+
+            <input onclick="final_result()" id="result" type="button" value="=">
+        </section>
+        <section class="operators scientific">
+            <input type="button" value="2^nd">
+            <input type="button" value="π">
+            <input type="button" value="e">
+            <input type="button" value="C">
+            <input type="button" value="X">
+
+            <input type="button" value="X^2">
+            <input type="button" value="1/X">
+            <input type="button" value="|x|">
+            <input type="button" value="exp">
+            <input type="button" value="mod">
+
+            <input type="button" value="2√x">
+            <input type="button" value="(">
+            <input type="button" value=")">
+            <input type="button" value="!">
+            <input type="button" value="/">
+
+            <input type="button" value="x^y">
+            <input class="numbers" type="button" value="7">
+            <input class="numbers" type="button" value="8">
+            <input class="numbers" type="button" value="9">
+            <input type="button" value="*">
+
+            <input type="button" value="10^x">
+            <input class="numbers" type="button" value="4">
+            <input class="numbers" type="button" value="5">
+            <input class="numbers" type="button" value="6">
+            <input type="button" value="-">
+
+            <input type="button" value="log">
+            <input class="numbers" type="button" value="1">
+            <input class="numbers" type="button" value="2">
+            <input class="numbers" type="button" value="3">
+            <input type="button" value="+">
+
+            <input type="button" value="In">
+            <input class="numbers" type="button" value="+/-">
+            <input class="numbers" type="button" value="0">
+            <input class="numbers" type="button" value=",">
+            <input type="button" value="=">
+        </section>
+    </div>
+</body>
+
+</html>
