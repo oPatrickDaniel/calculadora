@@ -1,8 +1,14 @@
 
-
 const display_result = document.getElementById("display_result")
 const display_preview = document.getElementById("display_preview")
 
+function config_opacity() {
+    if (display_preview.innerText == "0") {
+        display_preview.classList.add("opacity")
+    } else {
+        display_preview.classList.remove("opacity")
+    }
+}
 
 function inner_digit(num) {
 
@@ -30,12 +36,18 @@ function inner_preview(operator) {
     }
 
     display_result.innerText = "0"
+    config_opacity()
 }
 
-function to_clean() {
-
+function C() {
     display_preview.innerText = "0"
     display_result.innerText = "0"
+    config_opacity()
+}
+
+function CE() {
+    display_result.innerText = "0"
+    config_opacity()
 }
 
 function del() {
@@ -46,13 +58,6 @@ function del() {
     } else {
         document.getElementById("display_result").innerHTML = display_result.substring(0, display_result.length - 1)
     }
-}
-
-function final_result() {
-
-    result = display_preview.innerHTML + display_result.innerHTML
-    display_preview.innerText = "0"
-    display_result.innerText = eval(result)
 }
 
 function sqrt() {
@@ -74,3 +79,15 @@ function percentage() {
     let result = base_valor.substring(0, base_valor.length - 1) * (percentage / 100)
     display_result.innerText = result
 }
+
+
+
+function final_result() {
+
+    result = display_preview.innerHTML + display_result.innerHTML
+    display_preview.innerText = "0"
+    display_result.innerText = eval(result)
+    config_opacity()
+}
+
+
